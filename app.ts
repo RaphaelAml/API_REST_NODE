@@ -20,6 +20,9 @@ app.use("/", contratantesRoutes);
         await sequelize.authenticate();
         console.log("Models synchronized with the database")
 
+        await sequelize.sync();
+        console.log("Models synchrinized with the database;")
+
         //Start the server
         app.listen(PORT, () => {
             console.log("Server is running on port", PORT)
