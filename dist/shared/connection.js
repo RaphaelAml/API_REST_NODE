@@ -15,6 +15,7 @@ const sequelize = new Sequelize({
     password: "2636",
     host: "localhost",
     port: 5432,
+    logging: console.log, // Adicione esta linha
 });
 function testConnection() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -28,3 +29,4 @@ function testConnection() {
     });
 }
 testConnection();
+export default sequelize;
